@@ -1,5 +1,6 @@
 import 'package:character_almanach_mobile/l10n/app_localizations.dart';
 import 'package:character_almanach_mobile/screens/home.dart';
+import 'package:character_almanach_mobile/screens/root.dart';
 
 import 'providers/sqlflite/database_helper.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -12,14 +13,14 @@ import 'widgets/loader.dart';
 import 'package:flutter/material.dart';
 
 void main() async{
-    DatabaseHelper dbHelper = DatabaseHelper.instance;
+  DatabaseHelper dbHelper = DatabaseHelper.instance;
 
-    ReduxStoreManager().init(
-        Store<AppState>(appReducer, initialState: AppState.initial()),
-    );
+  ReduxStoreManager().init(
+    Store<AppState>(appReducer, initialState: AppState.initial()),
+  );
 
-    WidgetsFlutterBinding.ensureInitialized();
-    runApp(CharacterAlmanach());
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(CharacterAlmanach());
 }
 
 class CharacterAlmanach extends StatelessWidget {
@@ -47,7 +48,7 @@ class CharacterAlmanach extends StatelessWidget {
         children: [
           Loader(),
           const ErrorDialog(),
-          Home()
+          RootPage()
         ]
       ),
     );

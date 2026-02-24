@@ -1,15 +1,13 @@
+import 'package:character_almanach_mobile/widgets/infinite-carousel.dart';
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Character Almanach'),
-      ),
-      body: Center(
-        child: Text('Welcome to Character Almanach!'),
-      ),
+    return Center(
+      child: InfiniteCarousel()
     );
   }
 }
