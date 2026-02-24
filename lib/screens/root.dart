@@ -1,4 +1,5 @@
 import 'package:character_almanach_mobile/screens/home.dart';
+import 'package:character_almanach_mobile/screens/settings.dart';
 import 'package:flutter/material.dart';
 
 class RootPage extends StatefulWidget {
